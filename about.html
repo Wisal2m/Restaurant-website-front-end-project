@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+
+        /* Hero text overlay */
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="slideshow-container">
+            <img class="slides fade" src="images/about-hero1.jpg" alt="Hero Image 1">
+            <img class="slides fade" src="images/about-hero2.jpg" alt="Hero Image 2">
+            <img class="slides fade" src="images/about-hero3.jpg" alt="Hero Image 3">
+            <div class="hero-text">
+                <h1>About Us</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Our Story</h2>
+        <p>Welcome to our restaurant! We have been serving delicious food to our community since 2000. Our commitment to quality and customer satisfaction is unwavering. Join us for an unforgettable dining experience.</p>
+    </section>
+
+    <section class="container">
+        <h2>Meet Our Team</h2>
+        <div class="flex">
+            <div class="card">
+                <img src="images/gallery1.jpg" alt="Team Member 1">
+                <p>chris poran - Head Chef</p>
+            </div>
+            <div class="card">
+                <img src="images/team2.jpg" alt="Team Member 2">
+                <p>Jane Smith - Manager</p>
+            </div>
+            <div class="card">
+                <img src="images/team3.jpg" alt="Team Member 3">
+                <p>Emily Johnson - Pastry Chef</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Contact us: <a href="mailto:zaiqamahal@restaurant.com">zaiqamahal@restaurant.com</a></p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.querySelectorAll(".slides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex - 1].style.display = "block";  
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+    </script>
+</body>
+</html>
